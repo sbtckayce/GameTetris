@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/img/ir.blockinger.game_128x128.png" type="image/x-icon">
+    <title>Game Tetris</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="container__heading">-Game Tetris-</h1>
+        <div class="main">
+            <div class="main__score">
+                <h3 class="main__score-title">Score : </h3>
+                <h3 class="main__score-number">0</h3>
+            </div>
+            <canvas id="bg-main" width="400" height="720"></canvas>
+            <div class="barrier1"></div>
+            <div class="barrier2"></div>
+            <ul class="change-level">
+                <li class="lv1 active">Level 1</li>
+                <li class="lv2">Level 2</li>
+                <li class="lv3">Level 3</li>
+                <li class="lv4">Level 4
+
+                </li>
+                <li class="lv5">Level 5</li>
+               
+            </ul>
+            <div class="handle">
+                <ion-icon name="caret-up-outline" class="top-btn"></ion-icon>
+                <ion-icon name="caret-back-outline" class="left-btn"></ion-icon>
+                <ion-icon name="caret-forward-outline"class="right-btn"></ion-icon>
+                <ion-icon name="caret-down-outline" class="bot-btn"></ion-icon>
+
+            </div>
+            <h4 class="gameover">Game Over !</h4>
+            <h4 class="restart">Restart !</h4>
+            <h4 class="esc-text">Press esc to start again</h4>
+            <h4 class="play active">PLAY GAME</h4>
+            <h4 class="pausegame">Pause</h4>
+            <audio id="audio" src="./assets/music/y2meta.com - burbank - sorry i like you (128 kbps).mp3"></audio>
+            <audio id="ring" src="./assets/music/y2mate.com - Tiếng Ting.mp3"></audio>
+            <audio src="./assets/music/y2mate.com - NCS  Nhạc chuông  Game Over.mp3" id="sound-gameover"></audio>
+        </div>
+       
+        <div class="change-bg-btn">
+            <input type="text" placeholder="BG : Default" readonly id="input-bg" class="input-bg">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        <div class="change-music-btn">
+            <input type="text" placeholder="Music : Default" readonly id="input-music" class="input-music">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        <ul class="change-bg-list">
+            <li class="li active" data-text="Default"
+                data-img="url('./assets/img/bg2.jpg')">
+                Default
+            </li>
+            <li class="li" data-text="Background 1"
+            data-img="url('./assets/img/bg1.jpg')">
+            Background 1
+             </li>
+            <li class="li" data-text="Background 2"
+                data-img="url('./assets/img/bg0.jpg')">
+                Background 2
+            </li>
+            <li class="li" data-text="Background 3"
+                data-img="url('./assets/img/bg3.png')">
+                Background 3
+            </li>
+        </ul>
+        <ul class="change-music-list">
+            <li class="change-music-item" data-musicname="Default"
+            data-musicsrc="./assets/music/y2meta.com - burbank - sorry i like you (128 kbps).mp3"
+            >
+               Default
+            </li>
+            <li class="change-music-item" data-musicname="Music1"
+            data-musicsrc="./assets/music/y2mate.com - VietsubLyrics Play Date  Melanie Martinez.mp3"
+            >
+                Music1
+            </li>
+            <li class="change-music-item" data-musicname="Music2"
+            data-musicsrc="./assets/music/y2mate.com - Point the star  lofi Chill.mp3"
+            >
+                Music2
+            </li>
+            <li class="change-music-item" data-musicname="Music3"
+            data-musicsrc="./assets/music/y2mate.com - senbonzakura remix.mp3"
+            >
+                Music3
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/shape.js"></script>
+    <script src="./assets/js/canvas.js"></script>
+  
+</body>
+
+</html>
